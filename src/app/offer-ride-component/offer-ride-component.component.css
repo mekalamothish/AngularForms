@@ -1,0 +1,35 @@
+.fcontainer {
+    border: 2px solid blue;
+    width: 50%;
+    background-color: #f9f9f9;
+    margin: auto;
+  }
+  .f1container {  
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+
+  }
+  .kk{
+    padding: 20px;
+    margin: auto;
+  } 
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  legend{
+    width:100;
+    color:White;  
+    background-color: blue;
+  }
+  input.ng-touched.ng-invalid{
+    border:2px solid red;
+  }
+  input.ng-touched.ng-valid{
+    border:2px solid green;
+  }
+  .di{
+    color:red;
+  }
+  

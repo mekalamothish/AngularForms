@@ -1,0 +1,32 @@
+<div class="f1container" >
+<div class="fcontainer">
+  <legend>Car Ride Registration Form</legend>
+  <form class="kk" [formGroup]="regForm" (ngSubmit)="OnSubmit()">
+    <div>
+    <label for="name" class="form-label"> Name </label>
+    <input  id="name" type="text" class="form-control  " formControlName="name" placeholder="enter name" >
+  </div>
+  <div>
+    <label for="Startlocation" class="form-label"> Start Location </label>
+    <input  id="Startlocation" type="text" class="form-control" formControlName="startlocation" placeholder="enter StartcLocation">
+  </div>
+  <div>
+    <label for="destination" class="form-label"> Destination </label>
+    <input  id="destination" type="text" class="form-control" formControlName="destination" placeholder="enter destination">
+  </div>
+  <div>
+    <label for="car" class="form-label"> Car </label>
+    <input  id="car" type="text" class="form-control" formControlName="car" placeholder="enter car">
+  </div>
+  <div>
+    <label for="seats" class="form-label"> Seats Available </label>
+    <input  id="seats" type="number" class="form-control" formControlName="seats" placeholder="enter seats available">
+    <div *ngIf="regForm.get('seats')?.hasError('seatinvalid')&& regForm.get('seats')?.touched" class="di"> Seats should be greater than 0 and less than 8</div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary m-2"  [disabled]="regForm.invalid">submit</button>
+    <button type="button" class="btn btn-primary m-2">Go back</button>
+  </div>
+  </form>
+</div>
+</div>
